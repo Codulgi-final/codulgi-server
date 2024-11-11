@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" th:href="@{/css/register.css}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+<div class="container">
+    <div class="header-container">
+        <div class="logo-container">
+            <img th:src="@{/image/logo.png}"></img>
+            <p>codulgi</p>
+        </div>
+        <div class="register-title">
+            <p>회원가입</p>
+        </div>
+    </div>
+
+    <div class="item-container">
+        <div class="left-section">
+        </div>
+        <div class="right-section">
+        </div>
+    </div>
+
+    <div class="register-container">
+        <from action="#" method="POST">
+            <div class="register-form">
+                <label class="register-input-box">
+                    <input class="register-input" placeholder="이메일" type="text">
+                </label>
+                <label class="register-input-box">
+                    <input class="register-input" placeholder="비밀번호" type="password">
+                </label>
+                <label class="register-input-box">
+                    <input class="register-input" placeholder="비밀번호 확인" type="password">
+                </label>
+                <label class="register-input-box">
+                    <input class="register-input" maxlength="6" placeholder="생년월일 6자리" type="LocalDate">
+                </label>
+                <label class="gender-input-box">
+                    <button>남성</button>
+                    <button>여성</button>
+                </label>
+            </div>
+        </from>
+
+        <div class="submit-container">
+            <button type="submit">회원가입</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
