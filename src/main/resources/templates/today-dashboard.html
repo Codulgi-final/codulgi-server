@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" as="style" crossorigin
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link th:href="@{/css/today-dashboard.css}" rel="stylesheet"/>
+    <title>코둘기 - 일간 현황</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- HEADER -->
+    <div class="header-container">
+        <a href="/" class="logo-container">
+            <img th:src="@{/image/logo.png}">
+            <p>codulgi</p>
+        </a>
+        <div class="header-navs">
+            <a href="/login">로그인</a>
+            <a href="/register">회원가입</a>
+        </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <p>일간 현황</p>
+            <div class="select-date">
+                <i class="bi bi-chevron-left"></i>
+                <label for="datetime">
+                    <input id="datetime" type="date">
+                </label>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+        </div>
+
+        <script>
+            // 현재 날짜를 "YYYY-MM-DD" 형식으로 변환하여 기본값 설정
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById("datetime").value = today;
+        </script>
+
+        <div class="dashboard-graph">
+
+        </div>
+        <div class="content-container">
+            <div class="content-navs">
+                <div class="">일자 방문 횟수</div>
+                <div class="con-nav-active">게시물 순위</div>
+            </div>
+
+            <div class="content-rank-list">
+                <div class="content-rank">
+                    <p>1</p>
+                    <p>11월 11일 월요일 상쾌 합니다.</p>
+                    <p>100회</p>
+                </div>
+                <div class="content-rank">
+                    <p>1</p>
+                    <p>11월 11일 월요일 상쾌 합니다.</p>
+                    <p>100회</p>
+                </div>
+                <div class="content-rank">
+                    <p>1</p>
+                    <p>11월 11일 월요일 상쾌 합니다.</p>
+                    <p>100회</p>
+                </div>
+                <div class="content-rank">
+                    <p>1</p>
+                    <p>11월 11일 월요일 상쾌 합니다.</p>
+                    <p>100회</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
