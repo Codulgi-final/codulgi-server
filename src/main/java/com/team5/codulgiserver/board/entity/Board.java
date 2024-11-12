@@ -4,7 +4,6 @@ import com.team5.codulgiserver.board.dto.BoardRequest;
 import com.team5.codulgiserver.member.entity.Member;
 import jakarta.persistence.*;
 import lombok.Getter;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 
@@ -37,7 +36,7 @@ public class Board {
         this.content = request.getContent();
         this.thumbnail = request.getImage();
         this.member = member;
-        this.likeCount = 0;  // 초기 값 설정
+        this.likeCount = 0;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
