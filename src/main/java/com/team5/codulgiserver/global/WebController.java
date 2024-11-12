@@ -15,4 +15,9 @@ public class WebController {
     public String index() {
         return "today-dashboard";
     }
+
+    @GetMapping("/posting")
+    public String posting() {
+        return "posting";
+    }
 }
