@@ -11,6 +11,16 @@ public class WebController {
         return "main";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @GetMapping("/register")
+    public String register() {
+        return "register";
+    }
+
     @GetMapping("/today/dashboard")
     public String index() {
         return "today-dashboard";

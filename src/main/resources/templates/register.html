@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="container">
+    <script th:src="@{/js/register.js}"></script>
     <div class="header-container">
         <div class="logo-container">
             <img th:src="@{/image/logo.png}"></img>
@@ -25,31 +26,36 @@
     </div>
 
     <div class="register-container">
-        <form action="#" method="POST">
+        <form id="register-form" action="#" method="POST">
             <div class="register-form">
                 <p class="title">회원가입</p>
                 <label class="register-input-box">
-                    <input class="register-input" placeholder="이메일" type="text">
+                    <input class="register-input" id="email" placeholder="이메일" type="text">
                 </label>
                 <label class="register-input-box">
-                    <input class="register-input" placeholder="비밀번호" type="password">
+                    <input class="register-input" id="password" placeholder="비밀번호" type="password">
                 </label>
                 <label class="register-input-box">
-                    <input class="register-input" placeholder="비밀번호 확인" type="password">
+                    <input class="register-input" id="passwordConfirm" placeholder="비밀번호 확인" type="password">
                 </label>
                 <label class="register-input-box">
-                    <input class="register-input" maxlength="6" placeholder="생년월일 6자리" type="LocalDate">
+                    <input class="register-input" id="name" placeholder="이름" type="text">
+                </label>
+                <label class="register-input-box">
+                    <input class="register-input" id="birthday" maxlength="8" placeholder="생년월일 8자리 (예: 19981011)" type="text">
                 </label>
                 <div class="gender-input-box">
-                    <button class="gender-button" type="button">남성</button>
-                    <button class="gender-button" type="button">여성</button>
+                    <button type="button" onclick="selectGender('MALE')" class="gender-button">남성</button>
+                    <button type="button" onclick="selectGender('FEMALE')" class="gender-button">여성</button>
                 </div>
+                <input type="hidden" id="gender" value="">
                 <div class="submit-input-box">
-                    <button class="submit-button" type="submit">회원가입</button>
+                    <button class="submit-button" type="button" onclick="register()">회원가입</button>
                 </div>
             </div>
         </form>
 
     </div>
+</div>
 </body>
 </html>
