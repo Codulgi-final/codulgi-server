@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: pretendard;
+}
+body{
+    background-color: #FAFAFA;
+}
+
+.container{
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.header-container {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo-container > img {
+    width: 60px;
+    height: 60px;
+    object-fit: fill;
+}
+
+.logo-container > p {
+    font-size: 60px;
+    font-family: "Kranky";
+    font-weight: 600;
+}
+
+.login-container{
+    width: 1440px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-box{
+    width: 420px;
+    height: fit-content;
+}
+
+.middle-box{
+    width: 500px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.middle-box > p{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 39px;
+}
+
+.login-input-box{
+    position: relative;
+}
+
+.input-emoji{
+    position: absolute;
+    left: 42px;
+    top:38%;
+}
+
+.login-input{
+    width: 420px;
+    height: 71px;
+    font-size: 17px;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid #D2D2D2;
+    padding-left: 70px;
+    border-radius: 99px;
+}
+
+.middle-box > button{
+    width: 479px;
+    height: 75px;
+    background-color: #A8A8A8;
+    border-radius: 99px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s background-color ease-in-out;
+}
+
+.middle-box > button:hover {
+    background-color: #3C3C3C;
+
+}
+
+
+.right-box{
+    width: 394px;
+    height: fit-content;
+}
+
+.login-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.login-nav > p{color: #A8A8A8;}
+.login-nav > a{
+    text-decoration: none;
+    color: #A8A8A8;
+
+}
