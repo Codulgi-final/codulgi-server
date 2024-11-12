@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" th:href="@{/css/register.css}"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>회원가입</title>
@@ -15,9 +15,6 @@
             <img th:src="@{/image/logo.png}"></img>
             <p>codulgi</p>
         </div>
-        <div class="register-title">
-            <p>회원가입</p>
-        </div>
     </div>
 
     <div class="item-container">
@@ -28,8 +25,9 @@
     </div>
 
     <div class="register-container">
-        <from action="#" method="POST">
+        <form action="#" method="POST">
             <div class="register-form">
+                <p class="title">회원가입</p>
                 <label class="register-input-box">
                     <input class="register-input" placeholder="이메일" type="text">
                 </label>
@@ -42,18 +40,16 @@
                 <label class="register-input-box">
                     <input class="register-input" maxlength="6" placeholder="생년월일 6자리" type="LocalDate">
                 </label>
-                <label class="gender-input-box">
-                    <button>남성</button>
-                    <button>여성</button>
-                </label>
+                <div class="gender-input-box">
+                    <button class="gender-button" type="button">남성</button>
+                    <button class="gender-button" type="button">여성</button>
+                </div>
+                <div class="submit-input-box">
+                    <button class="submit-button" type="submit">회원가입</button>
+                </div>
             </div>
-        </from>
+        </form>
 
-        <div class="submit-container">
-            <button type="submit">회원가입</button>
-        </div>
     </div>
-
-
 </body>
 </html>
