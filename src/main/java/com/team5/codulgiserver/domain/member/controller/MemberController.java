@@ -1,14 +1,12 @@
-package com.team5.codulgiserver.member.controller;
+package com.team5.codulgiserver.domain.member.controller;
 
-import com.team5.codulgiserver.member.dto.MemberRequestDto;
-import com.team5.codulgiserver.member.service.MemberService;
+import com.team5.codulgiserver.domain.member.dto.MemberRequestDto;
+import com.team5.codulgiserver.domain.member.service.MemberService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/member")
@@ -29,6 +27,13 @@ public class MemberController {
     public ResponseEntity<?> login(@RequestBody MemberRequestDto.login request) {
 
         return memberService.loginMember(request, session);
+    }
+
+    /* 사용자 로그아웃 */
+    @GetMapping("/logout")
+    public ResponseEntity<String> logout(HttpSession session) {
+        session.removeAttribute("member");
+        return ResponseEntity.ok("로그아웃이 완료되었습니다.");
     }
 
 }

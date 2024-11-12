@@ -1,7 +1,6 @@
-package com.team5.codulgiserver.global;
+package com.team5.codulgiserver.global.controller;
 
-import com.team5.codulgiserver.member.dto.MemberResponse;
-import com.team5.codulgiserver.member.entity.Member;
+import com.team5.codulgiserver.domain.member.dto.MemberResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

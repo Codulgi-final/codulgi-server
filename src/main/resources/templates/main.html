@@ -5,6 +5,7 @@
     <link rel="stylesheet" as="style" crossorigin
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
     <link th:href="@{/css/main.css}" rel="stylesheet"/>
     <title>게시물 목록</title>
 </head>
@@ -23,7 +24,23 @@
             <div th:if="${loginUser != null}" class="header-navs">
                 <span th:text="'안녕하세요, ' + ${loginUser.name} + '님!'"></span>
                 <a href="/posting">글쓰기</a>
-                <a href="/logout">로그아웃</a>
+                <a href="#" onclick="logout()">로그아웃</a>
+
+                <script>
+                    function logout() {
+                        fetch('/api/v1/member/logout', {
+                            method: 'GET'
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    alert("로그아웃이 완료되었습니다.");
+                                    window.location.href = '/';
+                                } else {
+                                    alert("로그아웃 실패");
+                                }
+                            });
+                    }
+                </script>
             </div>
 
             <!-- 로그인되지 않은 경우 로그인/회원가입 링크를 표시 -->

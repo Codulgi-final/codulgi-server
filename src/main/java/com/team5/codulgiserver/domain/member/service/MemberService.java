@@ -1,9 +1,9 @@
-package com.team5.codulgiserver.member.service;
+package com.team5.codulgiserver.domain.member.service;
 
-import com.team5.codulgiserver.member.dto.MemberRequestDto;
-import com.team5.codulgiserver.member.dto.MemberResponse;
-import com.team5.codulgiserver.member.entity.Member;
-import com.team5.codulgiserver.member.repository.MemberRepository;
+import com.team5.codulgiserver.domain.member.dto.MemberRequestDto;
+import com.team5.codulgiserver.domain.member.dto.MemberResponse;
+import com.team5.codulgiserver.domain.member.entity.Member;
+import com.team5.codulgiserver.domain.member.repository.MemberRepository;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

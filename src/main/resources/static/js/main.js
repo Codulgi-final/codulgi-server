@@ -1,6 +1,6 @@
 async function fetchBoards() {
     try {
-        const response = await fetch("/board");  // getAllBoards API 엔드포인트로 수정
+        const response = await fetch("/api/v1/board");  // getAllBoards API 엔드포인트로 수정
         if (!response.ok) throw new Error("Failed to fetch boards");
 
         const boards = await response.json();

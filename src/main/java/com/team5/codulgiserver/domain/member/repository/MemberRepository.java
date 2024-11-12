@@ -1,6 +1,6 @@
-package com.team5.codulgiserver.member.repository;
+package com.team5.codulgiserver.domain.member.repository;
 
-import com.team5.codulgiserver.member.entity.Member;
+import com.team5.codulgiserver.domain.member.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

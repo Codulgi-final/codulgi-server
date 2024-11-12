@@ -1,9 +1,8 @@
-package com.team5.codulgiserver.board.controller;
+package com.team5.codulgiserver.domain.board.controller;
 
-import com.team5.codulgiserver.board.dto.BoardRequest;
-import com.team5.codulgiserver.board.service.BoardService;
-import com.team5.codulgiserver.member.dto.MemberResponse;
-import com.team5.codulgiserver.member.entity.Member;
+import com.team5.codulgiserver.domain.board.dto.BoardRequest;
+import com.team5.codulgiserver.domain.board.service.BoardService;
+import com.team5.codulgiserver.domain.member.dto.MemberResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
@@ -12,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/board")
+@RequestMapping("/api/v1/board")
 @RequiredArgsConstructor
 public class BoardController {
 

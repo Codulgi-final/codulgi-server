@@ -1,11 +1,11 @@
-package com.team5.codulgiserver.board.service;
+package com.team5.codulgiserver.domain.board.service;
 
-import com.team5.codulgiserver.board.dto.BoardRequest;
-import com.team5.codulgiserver.board.dto.BoardResponse;
-import com.team5.codulgiserver.board.entity.Board;
-import com.team5.codulgiserver.board.repository.BoardRepository;
-import com.team5.codulgiserver.member.entity.Member;
-import com.team5.codulgiserver.member.repository.MemberRepository;
+import com.team5.codulgiserver.domain.board.dto.BoardRequest;
+import com.team5.codulgiserver.domain.board.dto.BoardResponse;
+import com.team5.codulgiserver.domain.board.entity.Board;
+import com.team5.codulgiserver.domain.board.repository.BoardRepository;
+import com.team5.codulgiserver.domain.member.entity.Member;
+import com.team5.codulgiserver.domain.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,7 +1,7 @@
-package com.team5.codulgiserver.member.entity;
+package com.team5.codulgiserver.domain.member.entity;
 
-import com.team5.codulgiserver.board.entity.Board;
-import com.team5.codulgiserver.member.dto.MemberRequestDto;
+import com.team5.codulgiserver.domain.board.entity.Board;
+import com.team5.codulgiserver.domain.member.dto.MemberRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 

@@ -10,7 +10,7 @@ async function publishPost() {
     }
 
     try {
-        const response = await fetch("/board", {
+        const response = await fetch("/api/v1/board", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

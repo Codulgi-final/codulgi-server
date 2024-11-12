@@ -1,9 +1,8 @@
-package com.team5.codulgiserver.board.dto;
+package com.team5.codulgiserver.domain.board.dto;
 
-import com.team5.codulgiserver.board.entity.Board;
+import com.team5.codulgiserver.domain.board.entity.Board;
 import lombok.Data;
 import lombok.Getter;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 

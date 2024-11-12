@@ -1,7 +1,7 @@
-package com.team5.codulgiserver.member.dto;
+package com.team5.codulgiserver.domain.member.dto;
 
-import com.team5.codulgiserver.member.entity.Gender;
-import com.team5.codulgiserver.member.entity.Member;
+import com.team5.codulgiserver.domain.member.entity.Gender;
+import com.team5.codulgiserver.domain.member.entity.Member;
 import lombok.Data;
 
 import java.time.LocalDate;

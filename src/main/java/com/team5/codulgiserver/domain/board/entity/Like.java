@@ -1,6 +1,6 @@
-package com.team5.codulgiserver.board.entity;
+package com.team5.codulgiserver.domain.board.entity;
 
-import com.team5.codulgiserver.member.entity.Member;
+import com.team5.codulgiserver.domain.member.entity.Member;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

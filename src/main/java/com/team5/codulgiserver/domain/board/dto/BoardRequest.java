@@ -1,4 +1,4 @@
-package com.team5.codulgiserver.board.dto;
+package com.team5.codulgiserver.domain.board.dto;
 
 
 import lombok.Data;
