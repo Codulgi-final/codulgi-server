@@ -1,6 +1,7 @@
 package com.team5.codulgiserver.member.service;
 
 import com.team5.codulgiserver.member.dto.MemberRequestDto;
+import com.team5.codulgiserver.member.dto.MemberResponse;
 import com.team5.codulgiserver.member.entity.Member;
 import com.team5.codulgiserver.member.repository.MemberRepository;
 import jakarta.servlet.http.HttpSession;
@@ -34,15 +35,22 @@ public class MemberService {
 
     /* 로그인 */
     public ResponseEntity<?> loginMember(MemberRequestDto.login request, HttpSession session) {
+
         Optional<Member> findMember = memberRepository.findByEmail(request.getEmail());
+
+        /* Request를 통해 해당 이메일과 일치하는 사람이 있다면 */
         if (findMember.isPresent()) {
             Member member = findMember.get();
+
+            /* 비밀번호가 일치 할때 */
             if (member.getPassword().equals(request.getPassword())) {
 
-                /* 세션에 로그인을 성공한 사용자의 정보를 저장한다.*/
-                session.setAttribute("member", member);
+                MemberResponse memberResponse = new MemberResponse(member);
 
-                return ResponseEntity.status(HttpStatus.OK).body(member);
+                /* 세션에 로그인을 성공한 사용자의 정보를 저장한다.*/
+                session.setAttribute("member", memberResponse);
+
+                return ResponseEntity.status(HttpStatus.OK).body(memberResponse);
             } else {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("비밀번호를 다시 확인하세요.");
             }

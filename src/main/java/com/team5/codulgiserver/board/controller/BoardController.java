@@ -2,6 +2,7 @@ package com.team5.codulgiserver.board.controller;
 
 import com.team5.codulgiserver.board.dto.BoardRequest;
 import com.team5.codulgiserver.board.service.BoardService;
+import com.team5.codulgiserver.member.dto.MemberResponse;
 import com.team5.codulgiserver.member.entity.Member;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,7 @@ public class BoardController {
     /* 게시물 작성 */
     @PostMapping
     public ResponseEntity<?> createBoard(@RequestBody BoardRequest.save request) {
-        Member member = (Member) session.getAttribute("member");
+        MemberResponse member = (MemberResponse) session.getAttribute("member");
 
         request.setAuthorId(member.getId());
         return boardService.createBoard(request);
