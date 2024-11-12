@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F8F8F8;
+}
+.container {
+    flex-grow: 1;
+    max-width: 1440px;
+    white-space: nowrap;
+    padding: 30px 20px;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container >img {
+    width: 60px;
+    height: 60px;
+    object-fit: fill;
+}
+
+.logo-container >p {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: "Kranky", serif;
+}
+
+.register-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: 480px;
+    padding-top: 45px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.register-form >p {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.register-input-box {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.register-input {
+    width: 420px;
+    height: 70px;
+    font-size: 14px;
+    justify-content: center;
+    border-radius: 100px;
+    padding-left: 50px;
+    border:1px solid black;
+    outline: none;
+    color: #A0A0A0;
+}
+
+.gender-input-box {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gender-button {
+    width: 205px;
+    height: 70px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    align-items: center;
+    border-radius: 100px;
+    color: #A0A0A0;
+}
+.gender-button:hover {
+    background-color: #B0B0B0;
+}
+
+.submit-input-box {
+    width: 100%;
+    display: flex;
+}
+.submit-button {
+    cursor: pointer;
+    width: 420px;
+    height: 70px;
+    border: none;
+    margin-bottom: 115px;
+    border-radius: 100px;
+    background-color: #000000;
+    color: #A0A0A0;
+}
+.register-submit:hover {
+    background-color: #B0B0B0;
+}
