@@ -1,7 +1,3 @@
-## 브랜치 전략
-
-<img width="1471" alt="image" src="https://github.com/user-attachments/assets/b29896ba-691c-46d4-a431-b8905ad98965">
-
 ## 서버 시작 단계
 
 1. [docker-compose.yml](docker-compose.yml) 을 먼저 실행 해주세요.
@@ -14,3 +10,9 @@
     ```
 
 2. 서버 구동
+
+## 브랜치 전략
+
+<img width="1471" alt="image" src="https://github.com/user-attachments/assets/b29896ba-691c-46d4-a431-b8905ad98965">
+
+
