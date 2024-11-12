@@ -14,7 +14,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -39,7 +41,7 @@ public class BoardService {
                 new Board(request, findMember.get())
         );
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(newBoard);
+        return ResponseEntity.status(HttpStatus.CREATED).body(new BoardResponse.board(newBoard));
     }
 
     /* 게시판 조회 - 상세 조회 */
@@ -56,7 +58,11 @@ public class BoardService {
     /* 게시판 조회 - 모두 조회 (Pageable) */
     public ResponseEntity<?> getAllBoards(Pageable pageable) {
         Page<Board> boards = boardRepository.findAll(pageable);
-        return ResponseEntity.status(HttpStatus.OK).body(boards);
+        List<BoardResponse.board> boardResponses = boards.getContent().stream()
+                .map(BoardResponse.board::new)
+                .collect(Collectors.toList());
+
+        return ResponseEntity.status(HttpStatus.OK).body(boardResponses);
     }
 
     /* 게시판 수정 */

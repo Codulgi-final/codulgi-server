@@ -29,7 +29,7 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Board> board;
 
     public Member(MemberRequestDto.save member) {
