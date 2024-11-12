@@ -86,7 +86,7 @@ body{
 .login-input{
     width: 420px;
     height: 71px;
-    font-size: 12px;
+    font-size: 17px;
     flex-direction: row;
     justify-content: center;
     border: 2px solid #D2D2D2;
@@ -97,11 +97,20 @@ body{
 .middle-box > button{
     width: 479px;
     height: 75px;
-    color: white;
-    background-color: #000000;
+    background-color: #A8A8A8;
     border-radius: 99px;
     border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s background-color ease-in-out;
 }
+
+.middle-box > button:hover {
+    background-color: #3C3C3C;
+
+}
+
 
 .right-box{
     width: 394px;
