@@ -18,6 +18,7 @@ public class BoardResponse {
         private String thumbnail;
         private String authorName;
         private String authorEmail;
+        private Integer likeCount;  // 추가된 필드
         private LocalDateTime createdAt;
         private LocalDateTime updatedAt;
 
@@ -28,6 +29,7 @@ public class BoardResponse {
             this.thumbnail = board.getThumbnail();
             this.authorName = board.getMember().getName();
             this.authorEmail = board.getMember().getEmail();
+            this.likeCount = board.getLikeCount();  // 추가된 필드 초기화
             this.createdAt = board.getCreatedAt();
             this.updatedAt = board.getUpdatedAt();
         }
