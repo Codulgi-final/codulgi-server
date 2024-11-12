@@ -15,7 +15,7 @@ public class BoardResponse {
         private Long id;
         private String title;
         private String content;
-        private MultipartFile thumbnail;
+        private String thumbnail;
         private String authorName;
         private String authorEmail;
         private LocalDateTime createdAt;

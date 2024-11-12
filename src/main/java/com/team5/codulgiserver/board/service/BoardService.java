@@ -7,12 +7,12 @@ import com.team5.codulgiserver.board.repository.BoardRepository;
 import com.team5.codulgiserver.member.entity.Member;
 import com.team5.codulgiserver.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -24,6 +24,7 @@ public class BoardService {
     private final MemberRepository memberRepository;
 
     /* 게시판 생성*/
+    @Transactional
     public ResponseEntity<?> createBoard(BoardRequest.save request) {
 
         /* 작성자 조회 */

@@ -10,7 +10,7 @@ public class BoardRequest {
     public static class save {
         private String title;
         private String content;
-        private MultipartFile image;
+        private String image;
         private Long authorId;
     }
 
@@ -19,7 +19,7 @@ public class BoardRequest {
         private Long id;
         private String title;
         private String content;
-        private MultipartFile image;
+        private String image;
         private Long authorId;
     }
 }

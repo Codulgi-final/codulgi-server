@@ -1,10 +1,8 @@
 package com.team5.codulgiserver.board.controller;
 
 import com.team5.codulgiserver.board.dto.BoardRequest;
-import com.team5.codulgiserver.board.entity.Board;
 import com.team5.codulgiserver.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

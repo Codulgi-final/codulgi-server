@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 
 @Table(name = "board")
 @Getter
+@Entity
 public class Board {
 
     @Id
@@ -18,14 +19,16 @@ public class Board {
 
     private String title;
     private String content;
-    private MultipartFile thumbnail;
 
-    /* 작성자*/
+    private String thumbnail;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
-    private Integer like;
+    @Column(name = "like_count")
+    private Integer likeCount;
+
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -34,7 +37,7 @@ public class Board {
         this.content = request.getContent();
         this.thumbnail = request.getImage();
         this.member = member;
-        this.like = 0;
+        this.likeCount = 0;  // 초기 값 설정
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
@@ -53,7 +56,6 @@ public class Board {
             this.thumbnail = request.getImage();
         }
         this.updatedAt = LocalDateTime.now();
-
         return this;
     }
 }
