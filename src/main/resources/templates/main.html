@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" as="style" crossorigin
@@ -18,10 +18,21 @@
             <img th:src="@{/image/logo.png}">
             <p>codulgi</p>
         </a>
-        <div class="header-navs">
-            <a href="/login">로그인</a>
-            <a href="/register">회원가입</a>
+        <div>
+            <!-- 로그인 상태에 따라 글쓰기 및 로그아웃 링크를 표시 -->
+            <div th:if="${loginUser != null}" class="header-navs">
+                <span th:text="'안녕하세요, ' + ${loginUser.name} + '님!'"></span>
+                <a href="/posting">글쓰기</a>
+                <a href="/logout">로그아웃</a>
+            </div>
+
+            <!-- 로그인되지 않은 경우 로그인/회원가입 링크를 표시 -->
+            <div th:if="${loginUser == null}" class="header-navs">
+                <a href="/login">로그인</a>
+                <a href="/register">회원가입</a>
+            </div>
         </div>
+
     </div>
 
     <!-- Content -->

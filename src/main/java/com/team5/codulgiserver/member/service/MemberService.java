@@ -3,6 +3,7 @@ package com.team5.codulgiserver.member.service;
 import com.team5.codulgiserver.member.dto.MemberRequestDto;
 import com.team5.codulgiserver.member.entity.Member;
 import com.team5.codulgiserver.member.repository.MemberRepository;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,11 +33,15 @@ public class MemberService {
     }
 
     /* 로그인 */
-    public ResponseEntity<?> loginMember(MemberRequestDto.login request) {
+    public ResponseEntity<?> loginMember(MemberRequestDto.login request, HttpSession session) {
         Optional<Member> findMember = memberRepository.findByEmail(request.getEmail());
         if (findMember.isPresent()) {
             Member member = findMember.get();
             if (member.getPassword().equals(request.getPassword())) {
+
+                /* 세션에 로그인을 성공한 사용자의 정보를 저장한다.*/
+                session.setAttribute("member", member);
+
                 return ResponseEntity.status(HttpStatus.OK).body(member);
             } else {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("비밀번호를 다시 확인하세요.");

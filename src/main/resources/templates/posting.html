@@ -6,13 +6,14 @@
     <title>Title</title>
 </head>
 <body>
+<script th:src="@{/js/posting.js}"></script>
 <div class="container">
     <div class="post-container">
         <input type="text" class="title-input" placeholder="제목">
         <textarea class="content-input" placeholder="내용을 작성하세요..."></textarea>
         <div class="buttons">
-            <button class="button cancel-button">취소</button>
-            <button class="button publish-button">발행</button>
+            <button class="button cancel-button" onclick="window.location.href='/'">취소</button>
+            <button class="button publish-button" onclick="publishPost()">발행</button>
         </div>
     </div>
 </div>

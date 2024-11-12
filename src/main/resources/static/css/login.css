@@ -28,6 +28,8 @@ body{
     flex-direction: column;
     align-items: center;
     margin-left: 20px;
+    text-decoration: none;
+    color: #333333;
 }
 
 .logo-container > img {

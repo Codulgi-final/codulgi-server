@@ -2,6 +2,8 @@ package com.team5.codulgiserver.board.controller;
 
 import com.team5.codulgiserver.board.dto.BoardRequest;
 import com.team5.codulgiserver.board.service.BoardService;
+import com.team5.codulgiserver.member.entity.Member;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -14,10 +16,14 @@ import org.springframework.web.bind.annotation.*;
 public class BoardController {
 
     private final BoardService boardService;
+    private final HttpSession session;
 
     /* 게시물 작성 */
     @PostMapping
     public ResponseEntity<?> createBoard(@RequestBody BoardRequest.save request) {
+        Member member = (Member) session.getAttribute("member");
+
+        request.setAuthorId(member.getId());
         return boardService.createBoard(request);
     }
 

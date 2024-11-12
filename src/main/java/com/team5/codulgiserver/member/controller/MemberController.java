@@ -2,6 +2,7 @@ package com.team5.codulgiserver.member.controller;
 
 import com.team5.codulgiserver.member.dto.MemberRequestDto;
 import com.team5.codulgiserver.member.service.MemberService;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
     private final MemberService memberService;
+    private final HttpSession session;
 
     /* 사용자 생성 */
     @PostMapping
@@ -25,7 +27,8 @@ public class MemberController {
     /* 사용자 로그인 */
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody MemberRequestDto.login request) {
-        return memberService.loginMember(request);
+
+        return memberService.loginMember(request, session);
     }
 
 }

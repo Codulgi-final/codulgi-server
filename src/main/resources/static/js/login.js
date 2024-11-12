@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (response.ok) {
                 const data = await response.json();
                 alert("로그인 성공!");
-                // 성공 시 추가 작업 수행 (예: 토큰 저장 또는 리다이렉트)
+               window.location.href="/";
             } else {
                 const errorText = await response.text();
                 alert(errorText); // 서버에서 보낸 에러 메시지를 그대로 표시
