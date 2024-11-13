@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mariadb://mariadb:3306/mydb
-    username: myuser
-    password: mypassword
+    url: jdbc:mariadb://mariadb:3306/codulgi_db
+    username: codulgi
+    password: codul1234
     driver-class-name: org.mariadb.jdbc.Driver
 
   jpa:
