@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://mariadb:3306/mydb
+    username: myuser
+    password: mypassword
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      # 연결 재시도 설정
+      connection-timeout: 30000       # 연결 시도 타임아웃 (ms). 기본값: 30000ms
+      validation-timeout: 5000        # 연결 유효성 검사 타임아웃 (ms)
+      max-lifetime: 1800000           # 연결 최대 수명 (ms)
+      maximum-pool-size: 10           # 최대 연결 풀 크기
+      minimum-idle: 5                 # 최소 유휴 연결 수
+      initialization-fail-timeout: 5 # 연결 실패 시 재시도 (-1은 무한 대기)
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect

@@ -15,7 +15,6 @@ public class ApiLoggingInterceptor implements HandlerInterceptor {
         /* 인터셉터 진입 시점 */
         long startTime = System.currentTimeMillis();
         request.setAttribute("startTime", startTime);
-        log.info("Incoming request data - URI: " + request.getRequestURI() + ", HTTP Method: " + request.getMethod());
         return true;
     }
 
