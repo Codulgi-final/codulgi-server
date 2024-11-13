@@ -42,3 +42,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+//tasks.jar {
+//	archiveFileName = "codulgi-server-0.0.1-SNAPSHOT.jar"          // 원하는 JAR 파일 이름
+//	destinationDirectory = file("/home/kim1/final_infra/spring-app") // 생성될 JAR 파일의 저장 위치
+//}
+
+bootJar {
+	archiveFileName = "app.jar"
+	destinationDirectory = file("/home/kim1/final_infra/spring-app")
+}

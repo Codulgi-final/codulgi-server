@@ -15,4 +15,5 @@
 
 <img width="1471" alt="image" src="https://github.com/user-attachments/assets/b29896ba-691c-46d4-a431-b8905ad98965">
 
-
+## jar 파일 만들기
+$ ./gradlew bootJar
